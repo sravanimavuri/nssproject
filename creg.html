@@ -1,0 +1,64 @@
+<html
+<head>
+<h1 style="background-color:DodgerBlue;" align="center" >COORDINATOR REGISTRATION </h1>
+<script>
+function validateForm() {
+  var x = document.forms["myFormi"]["cfirstname"].value;
+  var y = document.forms["myFormi"]["clastname"].value;
+  var z = document.forms["myFormi"]["cdepartment"].value;
+  var a = document.forms["myFormi"]["cregisterno"].value;
+  var b = document.forms["myFormi"]["cemail"].value;
+  var d = document.forms["myFormi"]["cusername"].value;
+  var e = document.forms["myFormi"]["cpassword"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+  }
+  if(y==""){
+   alert("lastname must be filled ");
+  }
+    if (z == "") {
+    alert("department must be filled out");
+  }
+  if(a==""){
+   alert("register number must be filled ");
+  }
+    if (b == "") {
+    alert("enter valid email address in valid format");
+  }
+  if(d==""){
+   alert("username number must be filled ");
+  }
+  if(e==""){
+   alert("password number must be filled ");
+  }
+}
+</script>
+</head>
+<style>
+body {
+background-image: url("https://cache.desktopnexus.com/thumbseg/656/656536-bigthumbnail.jpg");
+height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+</style>
+<body style="background-color:seablue;" align="center">
+<table align=center>
+<form name="myFormi" onsubmit="return validateForm()" method="post" action="cregp.php">
+<th><h3>cfirstname</h3></th><td><input name="cfirstname" type="text" fontsize=100></td></tr>
+<th><h3>clastname</h3></th><td><input name="clastname" type="text"></td></tr>
+<th><h3>cdepartment</h3></th><td><input name="cdepartment" type="text"></td></tr>
+<th><h3>cregisterno</h3></th><td><input name="cregisterno" type="text"></td></tr>
+<th><h3>cphoneno</h3></th><td><input name="cphoneno" type="text"></td></tr>
+<th><h3>cbloodgroup</h3></th><td><input name="cbloodgroup" type="text"></td></tr>
+<th><h3>caddress</h3></th><td><input name="caddress" type="text"></td></tr>
+<th><h3>cemail</h3></th><td><input name="cemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text"></td></tr>
+<th><h3>cusername</h3></th><td><input name="cusername" type="text" required></td></tr>
+<th><h3>cpassword</h3></th><td><input name="cpassword" pattern=".{6,}" type="text" required></td></tr>
+</table>
+<div style="text-align:center">
+<th><tr><input type="submit" value="submit" ></tr></th>
+</form>
+</body>
+</html>
